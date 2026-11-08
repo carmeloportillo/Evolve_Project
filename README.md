@@ -2,13 +2,15 @@
 
 📊 Data Science project focused on data analysis, exploratory data analysis (EDA), data visualization, and machine learning to extract meaningful insights and support data-driven decision-making.
 
-## Project Objectives
+## Proyect members
 
-- Explore and analyze datasets.
-- Perform exploratory data analysis (EDA).
-- Create meaningful data visualizations.
-- Develop and evaluate machine learning models when appropriate.
-- Promote reproducible analysis and collaborative development.
+| Member | GitHub |
+|---|---|
+| Antonio Pérez Galán | [@Antoino1997](https://github.com/Antoino1997) |
+| Eduardo Ginés de la Presa | [@EduardDGP](https://github.com/EduardDGP) |
+| Carmelo Portillo Herrera | [@carmeloportillo](https://github.com/carmeloportillo) |
+| Daniel Calvo Jiménez | [@DanielCJ-27-03](https://github.com/DanielCJ-27-03) |
+| Pamela Pineda Domínguez | [@pamela-pineda](https://github.com/pamela-pineda) |
 
 ## Project Structure
 
