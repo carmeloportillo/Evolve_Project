@@ -2,7 +2,7 @@
 
 📊 Data Science project focused on data analysis, exploratory data analysis (EDA), data visualization, and machine learning to extract meaningful insights and support data-driven decision-making.
 
-## Proyect members
+## Project members
 
 | Member | GitHub |
 |---|---|
@@ -11,6 +11,18 @@
 | Carmelo Portillo Herrera | [@carmeloportillo](https://github.com/carmeloportillo) |
 | Daniel Calvo Jiménez | [@DanielCJ-27-03](https://github.com/DanielCJ-27-03) |
 | Pamela Pineda Domínguez | [@pamela-pineda](https://github.com/pamela-pineda) |
+
+## Project status
+
+**Phase:** TFM0 — project proposal. The team is evaluating three proposals before choosing one.
+
+📄 Proposal sheet: [docs/entregas/00_ideas.md](docs/entregas/00_ideas.md)
+
+| # | Proposal | Authors |
+|---|---|---|
+| 1 | Sales funnel and process efficiency in a debt management company | Carmelo |
+| 2 | Predictive maintenance of bearings through anomaly detection | Antonio, Pamela |
+| 3 | Bank fraud detection with AI | Daniel, Eduardo |
 
 ## Project Objectives
 
@@ -32,7 +44,8 @@
     ├── data/
     │   ├── raw/
     │   └── processed/
-    ├── entregas/
+    ├── docs/
+    │   └── entregas/
     ├── notebooks/
     ├── src/
     ├── tests/
@@ -43,7 +56,7 @@
     ├── SECURITY.md
     └── README.md
 
-`entregas/` contains the project deliverables for the master's programme (e.g. `00_Ideas.md` with the project proposals).
+`docs/entregas/` contains the deliverables for the master's programme (e.g. [`00_ideas.md`](docs/entregas/00_ideas.md) with the project proposals).
 
 ## Requirements
 
