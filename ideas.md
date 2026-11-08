@@ -49,6 +49,35 @@ Estas herramientas pueden registrar averías, programar revisiones y supervisar 
 personalizados o aprovechan sus datos históricos para anticipar fallos.
 La propuesta sería incorporar una capa de análisis predictivo que transforme los datos operativos en alertas de riesgo y recomendaciones de mantenimiento.
 
+### Fuentes de datos
+
+Para desarrollar el sistema se necesitan datos de funcionamiento de maquinaria, preferiblemente registros temporales de sensores asociados a equipos identificables y, cuando sea posible, información sobre sus averías.
+
+Se plantean las siguientes fuentes:
+
+- AI4I 2020 Predictive Maintenance Dataset (UCI): dataset sintético de 10.000 registros que contiene variables como temperatura del aire, temperatura del proceso, velocidad de rotación, torque y desgaste de herramienta, además de indicadores de fallo. Permite desarrollar una primera prueba de clasificación de fallos.
+- NASA IMS Bearings Dataset: conjunto de datos experimentales de rodamientos que contiene mediciones de vibración a lo largo del tiempo. Permite estudiar la evolución del comportamiento de los componentes y detectar patrones asociados a su degradación.
+- NASA C-MAPSS: conjunto de datos de motores turbofán simulados con múltiples variables de sensores y ciclos de funcionamiento. Permite investigar modelos de estimación de vida útil restante (RUL).
+
+La estrategia inicial será utilizar AI4I 2020 para desarrollar y validar una primera prueba de concepto. Posteriormente, se estudiará la incorporación de NASA IMS para ampliar el análisis hacia la detección de degradación temporal.
+
+Es importante diferenciar los datos sintéticos de los experimentales: los resultados obtenidos con AI4I no demuestran por sí solos que el sistema pueda generalizar a maquinaria industrial real pero es una primera toma de contacto muy firme.
+
+### MVP
+
+Un sistema que, a partir de datos de funcionamiento de maquinaria industrial, sea capaz de identificar posibles fallos y generar alertas de riesgo para facilitar la planificación del mantenimiento.
+
+El MVP incluirá:
+
+- Carga y procesamiento de datos de maquinaria.
+- Análisis exploratorio de variables y patrones de funcionamiento.
+- Entrenamiento y comparación de modelos de Machine Learning.
+- Clasificación de posibles fallos y detección de anomalías.
+- Generación de alertas según el riesgo estimado.
+- Dashboard para consultar el estado de los equipos, las variables analizadas y el historial de alertas.
+
+La validación clave será comparar diferentes modelos frente a una referencia sencilla (baseline), utilizando una separación adecuada entre entrenamiento y prueba. Se evaluarán métricas como Precision, Recall, F1-score y PR-AUC, prestando especial atención a los falsos negativos, ya que no detectar una avería puede tener consecuencias económicas importantes.
+
 ### Valor
 
 - Reducción de las paradas imprevistas, anticipando posibles averías.
@@ -57,6 +86,15 @@ La propuesta sería incorporar una capa de análisis predictivo que transforme l
 - Aumento de la disponibilidad de los equipos y de la continuidad de la producción.
 - Optimización de los recursos técnicos y de los repuestos, evitando intervenciones innecesarias.
 - Mejora de la seguridad operativa, cuando la detección temprana permite prevenir fallos con consecuencias peligrosas.
+
+### Límites
+
+- Una anomalía no demuestra que exista una avería: el sistema identifica comportamientos inusuales que deben ser revisados por personal especializado.
+- Sin conexión a maquinaria real: la primera versión trabajará con datasets públicos y no tendrá acceso directo a sensores industriales.
+- Los resultados dependerán de la calidad y representatividad de los datos disponibles.
+- Los datasets sintéticos o experimentales no garantizan que los modelos funcionen con la misma precisión en una instalación industrial real.
+- No se contempla la ejecución automática de reparaciones ni la modificación del funcionamiento de las máquinas.
+- La predicción de vida útil restante (RUL) queda fuera del alcance inicial y dependerá de la disponibilidad de datos temporales adecuados.
 
 ## Idea 3 — Detección de fraude bancario con IA
 # Detección y prevención del fraude bancario mediante Inteligencia Artificial
