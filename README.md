@@ -13,19 +13,27 @@
 ## Project Structure
 
     Evolve_Project/
-    ├── .github/workflows/
+    ├── .github/
+    │   ├── ISSUE_TEMPLATE/
+    │   ├── workflows/
+    │   ├── dependabot.yml
+    │   └── pull_request_template.md
     ├── .vscode/
     ├── data/
     │   ├── raw/
     │   └── processed/
+    ├── entregas/
     ├── notebooks/
     ├── src/
     ├── tests/
     ├── .gitignore
+    ├── CONTRIBUTING.md
     ├── pyproject.toml
     ├── requirements.txt
     ├── SECURITY.md
     └── README.md
+
+`entregas/` contains the project deliverables for the master's programme (e.g. `00_Ideas.md` with the project proposals).
 
 ## Requirements
 
@@ -79,6 +87,8 @@ Jupyter notebooks are stored in `notebooks/`. Open them in Visual Studio Code an
 - Large datasets should be shared through an approved storage solution rather than Git.
 
 ## Collaboration Workflow
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full contribution guidelines.
 
 1. Synchronize your local `main` branch.
 2. Create a descriptive branch for your task.
