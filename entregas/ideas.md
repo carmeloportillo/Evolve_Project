@@ -1,12 +1,80 @@
 # Ideas de proyecto 
 
 ## Índice
-1. Idea 1 — ...
+1. Idea 1 — Eficiencia del funnel de ventas y del proceso de tramitación en una empresa de gestión de deudas
 2. Idea 2 — Mantenimiento predictivo mediante IA
 3. Idea 3 — Detección de fraude bancario con IA
 
-## Idea 1 — ...
-(contenido)
+## Idea 1 — Eficiencia del funnel de ventas y del proceso de tramitación en una empresa de gestión de deudas
+Análisis de datos anonimizados de una empresa real para mejorar la conversión comercial y la eficiencia operativa
+
+Autor: Carmelo
+
+### Descripción
+
+Análisis del funnel de ventas y del proceso operativo de una empresa del sector de gestión de deudas que capta clientes mediante llamada telefónica y gestiona la tramitación de la Ley de Segunda Oportunidad (LSO) y planes de pago para reunificación de deudas.
+
+El proyecto trabajará con datos anonimizados de la empresa para medir la conversión entre las distintas etapas del proceso (captación del lead, contacto telefónico, cualificación, contratación, tramitación y resolución), identificar dónde se pierden clientes y dónde se acumulan retrasos, y estimar qué leads tienen mayor probabilidad de convertir. A partir de estos resultados se propondrán mejoras concretas para priorizar llamadas, reducir abandonos y acortar los tiempos de tramitación.
+
+La solución incluirá un dashboard con las métricas del funnel y del proceso para su seguimiento por parte de dirección y de los equipos comercial y operativo.
+
+### Problema
+
+En un negocio basado en llamadas, el equipo comercial dedica el mismo esfuerzo a leads con muy distinta probabilidad de conversión, y las pérdidas entre etapas no siempre están medidas. Una vez contratado el servicio, la tramitación de la LSO o del plan de pago implica recopilación de documentación y pasos administrativos en los que pueden producirse cuellos de botella y abandonos.
+
+Sin un análisis sistemático de los datos del CRM y de la operativa, es difícil saber qué etapas son las más ineficientes, qué factores influyen en la conversión y dónde actuar primero.
+
+### Usuarios
+
+- Principal: dirección y responsables comerciales y de operaciones de la empresa.
+- Secundario: agentes comerciales (priorización de llamadas) y equipo de tramitación (seguimiento de expedientes).
+- Beneficiario indirecto: el cliente final, que recibe una atención más rápida y un proceso con menos fricción.
+
+### Solución actual
+
+El seguimiento se realiza habitualmente con el CRM y los informes de la centralita: volumen de leads, llamadas realizadas y contratos cerrados. Estas herramientas registran la actividad, pero no suelen ofrecer una visión completa del funnel de principio a fin, ni modelos que prioricen leads o anticipen retrasos y abandonos en la tramitación.
+
+La propuesta es añadir una capa analítica que convierta esos registros en métricas de conversión por etapa, tiempos de proceso y una puntuación de probabilidad de conversión para cada lead.
+
+### Fuentes de datos
+
+Datos internos de la empresa, exportados y anonimizados antes de su uso en el proyecto (a confirmar disponibilidad y alcance):
+
+- CRM: leads, origen o canal de captación, fechas y estado en cada etapa del funnel.
+- Registro de llamadas: número de intentos, duración, franja horaria y resultado del contacto.
+- Expedientes: tipo de servicio (LSO o reunificación), fechas de cada hito de la tramitación y estado final.
+
+Los datos personales (nombre, DNI, teléfono, importes identificables) se eliminarán o se sustituirán por identificadores no reversibles. Ningún dato en bruto se subirá al repositorio.
+
+### MVP
+
+Un análisis del funnel completo que identifique las etapas con mayor pérdida y retraso, junto con un modelo que estime la probabilidad de conversión de cada lead.
+
+El MVP incluirá:
+
+- Extracción, anonimización y limpieza de los datos.
+- Métricas de conversión y tiempos entre etapas, por canal y por tipo de servicio.
+- Análisis de cohortes y detección de cuellos de botella en la tramitación.
+- Modelo de lead scoring para priorizar llamadas.
+- Dashboard con las métricas clave del funnel y del proceso.
+
+La validación clave será comparar la priorización del modelo frente a una referencia sencilla (baseline, por ejemplo atender por orden de llegada), con una evaluación temporal (entrenar con un periodo y probar con el siguiente) y métricas como ROC-AUC, PR-AUC y la conversión obtenida en los leads mejor puntuados.
+
+### Valor
+
+- Mayor conversión con el mismo equipo comercial, priorizando los leads con más probabilidad de cierre.
+- Identificación de las etapas donde se pierden más clientes y de las causas asociadas.
+- Reducción de tiempos y abandonos en la tramitación.
+- Decisiones basadas en datos para dirección y responsables de equipo.
+- Caso de estudio con datos reales de empresa, no solo con datasets públicos.
+
+### Límites
+
+- Depende de la autorización de la empresa y de la calidad del registro de datos en el CRM.
+- Los datos deben estar anonimizados antes de salir de la empresa; se aplicará el RGPD, dado que se trata de información financiera de personas.
+- Las correlaciones encontradas no implican causalidad: las mejoras propuestas deberían validarse con pruebas controladas.
+- El modelo prioriza leads, pero no sustituye el criterio del agente ni la valoración jurídica de cada caso.
+- Los resultados son específicos de la empresa analizada y pueden no generalizar a otras del sector.
 
 ## Idea 2 — Mantenimiento predictivo mediante IA
 Mantenimiento predictivo que permita anticipar posibles fallos enmáquinas y equipos industriales
